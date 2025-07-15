@@ -12,13 +12,6 @@ export const createRoomRoute: FastifyPluginCallbackZod = (app) => {
           name: z.string().min(1, 'Room name is required'),
           description: z.string().optional(),
         }),
-        // response: {
-        //   201: z.object({
-        //     id: z.string(),
-        //     name: z.string(),
-        //     createdAt: z.string(),
-        //   }),
-        // },
       },
     },
     async (request, reply) => {
