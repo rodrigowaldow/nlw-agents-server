@@ -8,3 +8,24 @@ GET {{baseUrl}}/health
 
 # Get all rooms
 GET {{baseUrl}}/rooms
+
+###
+
+# Create new room
+POST {{baseUrl}}/rooms
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Room Test",
+  "description": "This is a test room"
+}
+
+###
+
+# Get room questions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+{
+  "roomId": "123e4567-e89b-12d3-a456-426614174000"
+}
